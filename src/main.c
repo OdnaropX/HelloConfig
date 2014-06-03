@@ -17,7 +17,9 @@ void aviso(char *mensagem){
 int main() {
 	ALLEGRO_CONFIG *config;
 	
-	config = carregar_configuracao("configuration.conf");
+	config = al_load_config_file("configuration.conf");
+	
+	//config = carregar_configuracao("configuration.conf");
     
 	if(!config)
         criar_configuracao("configuration.conf");
